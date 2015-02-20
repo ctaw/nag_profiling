@@ -1,0 +1,34 @@
+=render 'admin/partials/notice'
+
+.block-flat
+  .header
+    a.btn.btn-primary.pull-right href="/admin/users/new"
+      i.fa.fa-plus
+      | New Member 
+
+    h3 Users
+
+  .content
+    -if @users.blank?
+      =render '/admin/partials/no_records'
+    -else
+      .table-responsive.center-table
+        table.table.no-border.hover
+          thead.no-border
+            tr
+              th First Name
+              th Last Name
+              th Email
+              th
+          tbody.no-border-y
+            tr
+              -@users.each do |q|
+                tr
+                  td = q.first_name
+                  td = q.last_name
+                  td = q.email
+                  td.action-sm-td
+                    a.btn.btn-success href="/admin/users/#{q.id}/edit"
+                      i.fa.fa-pencil
+    =render 'admin/partials/pagination',:list=>@users
+

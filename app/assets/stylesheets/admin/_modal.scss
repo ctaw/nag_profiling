@@ -1,0 +1,67 @@
+.modal-content h4,
+.modal-content h4 {
+  font-weight: 400;
+}
+.modal-content h3,
+.modal-content h3 {
+  font-weight: 300;
+  margin-top: 0;
+  display: inline;
+}
+.modal-content h2 {
+  margin: 0;
+}
+.modal-content .modal-footer {
+  margin-top: 0;
+  background: #FBFBFB;
+  border-radius: 2px;
+  
+}
+
+.modal-content {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 0;
+}
+.modal-body {
+  padding: 30px 20px 15px 20px;
+
+}
+
+.modal-body-danger
+{
+
+  padding: 30px 20px;
+  background-size: 80px 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('Danger.png') 
+
+  
+}
+.modal-body.form {
+  padding: 30px 20px 15px;
+}
+.md-content .icheckbox_flat-green,
+.modal-content .icheckbox_flat-green {
+  margin-right: 5px;
+}
+.modal-content > .close {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.modal-content .modal-header {
+  border-bottom: 0;
+  padding: 20px;
+  border-radius: 2px;
+  background-color: $warning-color;
+}
+
+.modal-primary
+{
+  padding: 20px;
+  border-radius: 2px;
+  border-bottom: 5px solid $border-color !important;
+  background-color: $primary-color;
+  color: #fff;
+}

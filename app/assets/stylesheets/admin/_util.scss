@@ -1,0 +1,84 @@
+$primary-color: #3197BD;
+$default-color: #a1a1a1;
+$success-color: #62C459;
+$warning-color: #F2B740;
+$alert-color: #60aae9;
+$border-color: #ABB2B8;
+
+$default-hover: #808080;
+$primary-hover: #2D77B8;
+
+$success-hover: #47a447;
+
+.block
+{
+  display: block !important;
+}
+
+.action-sm-td
+{
+  width: 50px;
+}
+
+.action-m-td
+{
+  width: 100px;
+}
+
+.action-l-td
+{
+  width: 130px;
+}
+
+.error
+{
+border-color: #c00 !important;
+}
+
+.no-border {
+  border-top: 0;
+}
+
+
+.four-cell td
+{
+  width: 25%;
+}
+
+.danger{
+  background-color: #60aae9;
+}
+
+.two-cell td
+{
+  width: 50%;
+}
+
+
+.center-table tr th, tr td
+{
+  text-align: center ;
+}
+
+
+.vertical-align tr td 
+{
+
+  vertical-align: baseline !important;
+}
+
+.vertical-align tr.search td 
+{
+
+  vertical-align: middle !important;
+}
+
+
+button .fa
+{
+margin-right: 5px !important;
+}
+.text-align-center
+{
+  text-align: center;
+}

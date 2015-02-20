@@ -1,0 +1,42 @@
+.alert {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  box-shadow: 0;
+}
+.alert .sign {
+  color: #fff;
+  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+  text-align: center;
+  width: 25px;
+  display: inline-block;
+}
+.alert .close {
+  text-shadow: none;
+}
+.alert-primary {
+  background-color: #7761a7;
+  border-color: #6d579d;
+  color: #fff;
+}
+.alert-success {
+  background-color: #19b698;
+  border-color: #0fac8e;
+  color: #fff;
+}
+.alert-info {
+  background-color: #4aa3df;
+  border-color: #4099d5;
+  color: #fff;
+}
+.alert-warning {
+  background-color: #f16e3f;
+  border-color: #e76435;
+  color: #fff;
+}
+.alert-danger {
+  background-color: #ea6153;
+  border-color: #e05749;
+  color: #fff;
+}

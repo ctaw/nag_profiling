@@ -1,0 +1,120 @@
+.panel {
+  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.05);
+}
+.panel>.list-group .list-group-item {
+  border-color: #eee;
+  background: 0;
+  border-radius: 0;
+}
+.panel-heading, .panel-footer, .panel-group .panel {
+  border-radius: 0;
+}
+.panel-group {
+  margin-bottom: 20px;
+}
+.panel-group .panel+.panel {
+  margin-top: 0;
+  border-top: 0;
+}
+.panel-group .panel-heading {
+  border-bottom: 0;
+  padding: 17px 15px;
+}
+.panel-group .panel-heading a {
+  display: block;
+}
+.panel-group .panel-collapse {
+  -webkit-box-shadow: 0 -3px 0 0 transparent;
+  box-shadow: 0 -3px 0 0 transparent;
+}
+.panel-group .panel-collapse.in {
+  -webkit-box-shadow: 0 -3px 0 0 #76b6ec;
+  box-shadow: 0 -3px 0 0 #76b6ec;
+}
+.panel-group .collapsing {
+  height: 0;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+.panel.panel-block .panel-heading {
+  padding: 20px;
+  border: 0;
+}
+
+.panel-body
+{
+  margin-bottom: 0;
+  padding: 0px;
+}
+
+.panel.panel-block .panel-heading:before, .panel.panel-block .panel-heading:after {
+  content: " ";
+  display: table;
+}
+.panel.panel-block .panel-heading:after {
+  clear: both;
+}
+.panel.panel-block .panel-heading>div>img, .panel.panel-block .panel-heading>div>i {
+  position: relative;
+  top: -1px;
+  display: block;
+  float: left;
+  height: 30px;
+  margin: 0;
+  margin-right: 10px;
+}
+.panel.panel-block .panel-heading>div>i {
+  font-size: 31px;
+}
+.panel.panel-block .panel-heading>div h1 {
+  margin: -2px 0 0;
+  display: block;
+  float: left;
+  font-size: 18px;
+}
+.panel.panel-block .panel-heading>div h1 small {
+  margin: 1px 0 0;
+  display: block;
+  font-size: 12px;
+}
+.panel.panel-block .list-group .list-group-item:first-child {
+  border-top: 0;
+}
+.panel.panel-block .list-group .list-group-item {
+  padding: 15px 20px 20px;
+}
+.panel.panel-title-block {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 0;
+  border-bottom-width: 0;
+}
+.panel.panel-title-block h1 {
+  max-width: 180px;
+}
+.panel.panel-title-block h1 small {
+  line-height: 15px;
+}
+@media(min-width:480px) {
+  .panel.panel-title-block {
+  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  border-bottom-width: 1px;
+}
+.panel.panel-title-block h1 {
+  max-width: 70%}
+}.panel.panel-grid-demo {
+  padding: 0;
+  margin: 0;
+  border-width: 5px;
+  overflow: hidden;
+}
+.panel.panel-grid-demo .panel-heading {
+  color: #fff;
+  padding: 20px 0;
+}
+.row.panel-grid-demo {
+  margin-bottom: 20px;
+}

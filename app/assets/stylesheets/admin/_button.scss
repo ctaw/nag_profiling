@@ -1,0 +1,58 @@
+.action-btn
+{
+  padding: 4px 10px 5px;
+}
+
+.btn-default{
+  background-color: $default-color;
+  color: #fff;
+}
+
+.btn-default:hover
+{
+  background-color: $default-hover;
+  color: #fff;
+
+}
+
+.btn-primary{
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.btn-primary:hover
+{
+  background-color: $primary-hover;
+  color: #fff;
+
+}
+
+
+
+.btn-success{
+  background-color: $success-color;
+  color: #fff;
+}
+
+.btn-success:hover
+{
+  background-color: $success-hover;
+  color: #fff;
+
+}
+
+
+
+.btn
+{
+  border-radius: 0px !important;
+  border: 0px !important;
+  margin-left: 3px;
+}
+
+.btn i {
+font-size: 14px;
+margin-right: 2px;
+display: inline-block;
+min-width: 10px;
+}

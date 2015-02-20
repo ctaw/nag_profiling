@@ -1,0 +1,12 @@
+= form_for [:admin,@family_group], :remote=>true do |f|
+  .row
+    .col-md-3
+      .form-group
+        label Family Last Name
+        = f.text_field :family_last_name,:class=>"form-control input-sm required", :maxlength => "20"
+    .col-md-3
+      .form-group
+        label Name
+        = f.text_field :name,:class=>"form-control input-sm required", :maxlength => "20"
+
+  =render 'admin/partials/box_footer', :back_url =>"/admin/users"

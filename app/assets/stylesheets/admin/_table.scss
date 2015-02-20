@@ -1,0 +1,88 @@
+.table>thead>tr {
+    font-size: 0.9em;
+    background-color: #f2f2f2;
+}
+.table>thead>tr>th {
+    white-space: nowrap;
+    padding: 7px 10px 7px 10px;
+}
+@media screen and (max-width: 480px) {
+    .table>thead>tr>th {
+    position: relative;
+}
+}.table a:hover {
+    text-decoration: none;
+}
+.table-dark-header>thead>tr {
+    background-color: #909090;
+    color: #fff;
+}
+.dataTables_length {
+    float: left;
+    margin-bottom: 5px;
+}
+.dataTables_filter {
+    float: right;
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 480px) {
+    .dataTables_filter {
+    float: none;
+}
+}.dataTables_length label, .dataTables_filter label, .dataTables_info, .dataTables_paginate {
+    font-weight: normal;
+    font-size: 0.85em;
+}
+.dataTables_info {
+    line-height: 2.7em;
+}
+.dataTables_paginate {
+    text-align: right;
+}
+.dataTables_paginate ul {
+    margin: 0;
+}
+.dataTables_scrollBody {
+    margin-bottom: 20px;
+}
+.dataTables_scrollBody .table {
+    margin-bottom: 0;
+}
+.table-sorting .sorting_asc:after, .table-sorting .sorting_desc:after, .table-sorting .sorting:after {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    font-family: FontAwesome;
+    content: '';
+    float: right;
+}
+@media screen and (max-width: 480px) {
+    .table-sorting .sorting_asc:after, .table-sorting .sorting_desc:after, .table-sorting .sorting:after {
+    position: absolute;
+    top: 0;
+}
+}.table-sorting .sorting_asc:after, .table-sorting .sorting_asc_disabled:after {
+    content: '\f0de'}
+.table-sorting .sorting_desc:after, .table-sorting .sorting_desc_disabled:after {
+    content: '\f0dd'}
+.table-sorting .sorting:after {
+    content: '\f0dc'}
+.table-sorting .sorting_asc_disabled, .table-sorting .sorting_desc_disabled {
+    color: #bbb;
+}
+.table-sorting thead th {
+    cursor: pointer;
+}
+.dataTables_scrollBody .table-sorting th:after {
+    content: '';
+    height: 0;
+}
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #F5F5F5;
+}
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+    background-color: #FFFEED;
+}

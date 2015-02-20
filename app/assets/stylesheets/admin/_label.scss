@@ -1,0 +1,50 @@
+.label {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  font-weight: normal;
+  font-size: 95%;
+}
+.label-default {
+  background-color: #a1a1a1;
+}
+.label i {
+  font-size: 100% !important;
+  color: inherit !important;
+  width: auto !important;
+  min-width: 11px;
+}
+.label-success {
+  background-color: #19b698;
+}
+.label-primary {
+  background-color: #7761a7;
+}
+.label-warning {
+  background-color: #fed16c;
+}
+.label-danger {
+  background-color: #ea6153;
+}
+.label-info {
+  background-color: #4aa3df;
+}
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+  background-color: #6d579d;
+}
+.label-success[href]:hover,
+.label-success[href]:focus {
+  background-color: #0fac8e;
+}
+.label-info[href]:hover,
+.label-info[href]:focus {
+  background-color: #4099d5;
+}
+.label-warning[href]:hover,
+.label-warning[href]:focus {
+  background-color: #f4c762;
+}
+.label-danger[href]:hover,
+.label-danger[href]:focus {
+  background-color: #e05749;
+}

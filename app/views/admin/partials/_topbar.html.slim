@@ -1,0 +1,17 @@
+#head-nav.navbar.navbar-default
+  .container-fluid
+    .navbar-collapse
+
+        ul.nav-user.navbar-right.navbar-icons
+          li.dropdown
+            a.dropdown-toggle data-toggle="dropdown" href="#fakelink" 
+              img.avatar.img-circle alt="Avatar" src="/assets/avatar.png" 
+              span style="font-size:14px;margin-left: 15px;" =current_user.email
+            ul.dropdown-menu.square.primary.margin-list-rounded.with-triangle
+              li 
+                a href="/edit" Account Setting
+              li.divider
+              li
+                a href="/logout" Logout
+        
+       

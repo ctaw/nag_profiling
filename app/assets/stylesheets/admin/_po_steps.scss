@@ -1,0 +1,66 @@
+.po_steps { 
+  list-style: none; 
+  overflow: hidden; 
+  font: 18px Helvetica, Arial, Sans-Serif;
+   padding-left: 0px;
+}
+.po_steps li { 
+  float: left; 
+}
+.po_steps li a {
+  color: white;
+  text-decoration: none; 
+  padding: 10px 0px 10px 65px;
+
+  background: brown;                   /* fallback color */
+  background: hsla(34,85%,35%,1); 
+  position: relative; 
+  display: block;
+  float: left;
+}
+.po_steps li a:after { 
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid hsla(34,85%,35%,1);
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  left: 100%;
+  z-index: 2; 
+}
+
+.po_steps li a:before { 
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 50px solid transparent;       
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  margin-left: 7px;
+  left: 100%;
+  z-index: 1; 
+}
+
+.po_steps li:first-child a {   background:        #55A2DF;}
+.po_steps li:first-child a:after { border-left-color:        #55A2DF; }
+.po_steps li:nth-child(2) a       { background:        #55A2DF; }
+.po_steps li:nth-child(2) a:after { border-left-color:        #55A2DF;  }
+.po_steps li:nth-child(3) a       { background:        #55A2DF; }
+.po_steps li:nth-child(3) a:after { border-left-color:  #55A2DF;}
+.po_steps li:nth-child(4) a       { background:        #55A2DF; }
+.po_steps li:nth-child(4) a:after { border-left-color: #55A2DF; }
+.po_steps li:nth-child(5) a       { background:        #55A2DF; }
+.po_steps li:nth-child(5) a:after { border-left-color: #55A2DF; }
+.po_steps li:nth-child(6) a       { background:        #55A2DF; }
+.po_steps li:nth-child(6) a:after { border-left-color: #55A2DF; }
+
+.po_steps li a:hover { background: #2E2190; }
+.po_steps li a:hover:after { border-left-color: #2E2190 !important; }

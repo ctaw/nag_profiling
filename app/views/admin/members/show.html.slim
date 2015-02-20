@@ -1,0 +1,23 @@
+.block-flat
+  .header
+    h4 Member
+    small Personal Information
+  .content
+    .row
+      .col-md-12
+        #accordion.panel-group
+          #panel1.panel.panel-primary
+            .panel-heading
+              h4.panel-title
+                a data-target="#personalInfo" data-toggle="collapse" href="#personalInfo" 
+                  | Personal Information
+            #personalInfo.panel-collapse.collapse.in
+              .panel-body
+                .col-lg-6
+                  label Name
+                  .span2 = @member.first_name + " " + @member.middle_name + " " + @member.last_name + " " + @member.name_extension
+                  label Age
+                  .span2 = @member.age  
+
+                .col-lg-6
+                

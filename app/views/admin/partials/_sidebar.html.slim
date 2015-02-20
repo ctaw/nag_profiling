@@ -1,0 +1,86 @@
+.sidebar
+  .navblock
+    .menu-space
+      .content
+        .sidebar-logo
+          .logo
+           
+        ul.navigation
+          li.active
+            a href="/admin/dashboard" 
+              i.fa.fa-home
+              span Dashboard
+
+          li.parent
+            a.parent-toggle  href="#" 
+              i.fa.fa-user
+              span Users
+
+            ul.sub-menu
+              li.dropdown-header
+                span Members 
+              li
+                a href="/admin/members"  Members
+              li
+                a href="/admin/family_groups"  Families
+
+          li.parent 
+            a.parent-toggle href="#"
+              i.fa.fa-users
+              span Memberships
+            ul.sub-menu
+              li.dropdown-header
+                span Memberships
+              li
+                a href="/admin/leaders"  Leaders  
+              li
+                a href="/admin/users"  Members  
+
+          li.parent
+            a.parent-toggle  href="#" 
+              i.fa.fa-tachometer
+              span Attendance & Monitoring
+
+            ul.sub-menu
+              li.dropdown-header
+                span Attendance and Monitoring
+              li
+                a href=""  Attendance
+              li
+                a href=""  Monitoring
+              li
+                a href="" Discipleship Tracker
+              li
+                a href="" Visitation Log
+
+          li.parent
+            a.parent-toggle  
+              i.fa.fa-list-ul
+              span Reports
+            ul.sub-menu
+              li.dropdown-header 
+                span Reports
+              li
+                a href="" Users
+              li
+                a href="" Attendance
+
+
+          li.parent
+            a href="/logout" data-method="delete" rel="nofollow"
+              i.fa.fa-power-off 
+
+
+         
+              
+
+
+    .text-right.collapse-button
+      input.form-control.search placeholder="Search..." type="text" 
+        button#sidebar-collapse.btn.btn-default style="" 
+          i.fa.fa-angle-right.toggle-i
+
+
+
+#sub-menu-nav.hidden
+  ul.sub-menu

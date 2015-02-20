@@ -1,0 +1,27 @@
+= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  #cl-wrapper.login-container style=("opacity: 1; margin-left: 0px;") 
+    .middle-login
+      .block-flat
+        .header.primary-bg
+          h4.text-center style="min-height:50px;color: white;padding: 15px;ont-size: 19px;" Navotas Assembly of God
+        div
+          .content
+   
+            .form-group
+              .col-sm-12
+                .input-group
+                  span.input-group-addon
+                    i.fa.fa-user
+                  = f.email_field :email, :class=>"form-control required input-lg",:placeholder=>"email" 
+            .form-group
+              .col-sm-12
+                .input-group
+                  span.input-group-addon
+                    i.fa.fa-lock
+                  = f.password_field :password, :class=>"form-control input-lg required",:placeholder=>"password"
+            .foot
+              .row
+                .col-md-4.pull-right
+                  input#login.btn.btn-block.btn-primary.submit-btn type="submit" value="Login"
+
+      .

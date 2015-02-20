@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+  username: postgres
+  password: admin
+
+development:
+  <<: *default
+  database: NAG_profiling_development
+
+test:
+  <<: *default
+  database: NAG_profiling_test
+
+production:
+  <<: *default
+  database: NAG_profiling_production
+  username: NAG_profiling
+  password: <%= ENV['NAG_PROFILING_DATABASE_PASSWORD'] %>

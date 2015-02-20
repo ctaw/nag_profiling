@@ -1,0 +1,33 @@
+=render 'admin/partials/notice'
+
+.block-flat
+  .header
+    a.btn.btn-primary.pull-right href="/admin/family_groups/new"
+      i.fa.fa-plus
+      | Add New Family
+    h3 Families
+
+  .content
+    -if @family_groups.blank?
+      =render '/admin/partials/no_records'
+    -else
+      .table-responsive.center-table
+        table.table.no-border.hover
+          thead.no-border
+            tr
+              th Family Name
+              th Members
+              th
+          tbody.no-border-y
+            tr
+              -@family_groups.each do |fg|
+                tr
+                  td = fg.family_last_name
+                  td = fg.no_of_members
+                  td
+                    .btn-group.pull-right
+                      a.btn.btn-info href="/admin/family_groups/#{fg.id}"
+                        i.fa.fa-search
+                      a.btn.btn-success href="/admin/family_groups/#{fg.id}/edit"
+                        i.fa.fa-pencil
+    =render 'admin/partials/pagination',:list=>@family_groups

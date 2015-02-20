@@ -1,0 +1,21 @@
+.block-flat
+  .header
+    a.btn.btn-primary.pull-right href="/admin/users/new?family_id=#{@family_group.id}&last_name=#{@family_group.family_last_name}"
+      i.fa.fa-plus
+      | Add Member
+    h3 = @family_group.family_last_name + " Family"
+
+  .content
+    br
+    h5 Family Members
+    br
+    .table-responsive.center-table
+      table.table.no-border.hover
+        thead.no-border
+          tr
+            th First Name
+            th Last Name
+            th Civil Status
+        tbody.no-border-y
+          
+
