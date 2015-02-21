@@ -17,6 +17,8 @@ class CreateMembersTable < ActiveRecord::Migration
       t.datetime :date_baptized_in_spirit
       t.integer :family_id
       t.integer :relationship_id
+      t.integer :position_id
+      t.integer :status #membership status
       t.timestamps
     end
   end
