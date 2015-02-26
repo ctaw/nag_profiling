@@ -11,8 +11,20 @@ Rails.application.routes.draw do
     resources :dashboard
     resources :users
     resources :family_groups
-    resources :church_involvements
-    resources :members
+
+    resources :members do
+      collection do
+        get 'church_involvement'
+        put :church
+      end
+    end
+    resources :involvements
+    # CRUD
+    resources :departments
+    resources :work_commitments
+    resources :positions
+    resources :ministries
+
   end
 
 end

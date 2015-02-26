@@ -1,0 +1,13 @@
+.block-flat
+  .header
+    a.btn.btn-default.pull-right href="/admin/departments" Back
+    h4 Departments
+  .content
+    .row
+      .col-md-12
+        .panel.panel-default
+          .panel-body
+            p.title = @department.name
+            hr
+            p.desc-label Description:
+            p.caption = @department.description

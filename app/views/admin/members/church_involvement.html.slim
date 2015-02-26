@@ -1,0 +1,73 @@
+=render '/admin/partials/error'
+
+.block-flat
+  .header
+    h4 Add New Member
+    small Church Involvement
+  .content
+    br
+    br
+    .row
+      .col-md-12
+        
+        .table-responsive.center-table
+        table.table.no-border.hover#churchTable
+          thead.no-border
+            tr
+              th Date Joined
+              th Ministry or Department Involved
+              th Work Commitments
+          tbody.no-border-y
+    br
+    hr
+    br
+    br
+    .row
+      .col-md-12
+        .alert.alert-success.msg_add.hidden
+          button.close aria-hidden="true" data-dismiss="alert" type="button"  ×
+          span Ministry or Department Involved Succefully Added! Add More
+        .alert.alert-danger.error_msg.hidden
+          button.close aria-hidden="true" data-dismiss="alert" type="button"  ×
+          span Add Church Involvements
+    .row
+      .col-md-4
+        label Date Joined
+        .form-group
+          input#date_joined.form-control.input-sm.date name="date_joined" type="text" /
+          input#member_id.form-control.input-sm.hidden name="member_id" type="text" value="#{params[:member_id]}"
+      .col-md-4
+        label Ministry or Department Involved
+        .form-group
+          = select_tag "department_id", options_from_collection_for_select(Department.all, "id", "name"), { :class => 'form-control input-sm', :prompt => "---"}
+      .col-md-4
+        label Work Commitment
+        .form-group
+          = select_tag "work_commitment_id", options_from_collection_for_select(WorkCommitment.all, "id", "name"), { :class => 'form-control input-sm', :prompt => "---"}
+    .row
+      .col-md-12
+        label
+        .form-group
+          .btn-group.pull-right
+            input type="button" value="Add" class="btn btn-default addChurch" /
+            a.btn.btn-primary href="/admin/members" Done
+
+javascript:
+  $( ".addChurch" ).click(function() {
+    var member_id = $("#member_id").val(),
+        date_joined = $("#date_joined").val(),
+        department_id = $("#department_id").val(),
+        work_commitment_id = $("#work_commitment_id").val();
+    $.ajax({
+      type: "PUT",
+      url: "/admin/members/church",
+      dataType : 'script',
+      data: { 
+              member_id : member_id,
+              date_joined: date_joined, 
+              department_id: department_id,
+              work_commitment_id: work_commitment_id
+            }
+    });
+    return false;
+  });    

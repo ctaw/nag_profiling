@@ -13,11 +13,44 @@
                   | Personal Information
             #personalInfo.panel-collapse.collapse.in
               .panel-body
-                .col-lg-6
-                  label Name
-                  .span2 = @member.first_name + " " + @member.middle_name + " " + @member.last_name + " " + @member.name_extension
-                  label Age
-                  .span2 = @member.age  
-
-                .col-lg-6
-                
+                .row
+                  .col-lg-12
+                    table.table.table-condensed
+                      tr
+                        th Name
+                        td style="text-align:left" = @member.first_name + " " + @member.middle_name + " " + @member.last_name + " " + @member.name_extension
+                      tr
+                        th Address
+                        td style="text-align:left" = @member.address
+                      tr
+                        th Birthday
+                        td style="text-align:left" = format_date(@member.birthdate)
+                      tr
+                        th Age
+                        td style="text-align:left" = @member.age
+                    
+                .row
+                  .col-lg-6
+                    br
+                    table.table.table-condensed.no-border
+                      tr
+                        th Birthplace
+                        td = @member.birthplace
+                      tr
+                        th Civil Status
+                        td = @member.get_civil_status
+                      tr
+                        th Occupation
+                        td = @member.occupation
+                  .col-lg-6
+                    br
+                    table.table.table-condensed.no-border
+                      tr
+                        th Date Accepted Christ
+                        td = format_date(@member.date_accepted_christ)
+                      tr
+                        th Date Baptized in Water
+                        td = format_date(@member.date_baptized_in_water)
+                      tr
+                        th Date Baptized in Spirit
+                        td = format_date(@member.date_baptized_in_spirit)

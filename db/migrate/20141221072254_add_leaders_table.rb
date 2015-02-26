@@ -23,15 +23,6 @@ class AddLeadersTable < ActiveRecord::Migration
       t.timestamps
     end
 
-    # Church Involvement
-    create_table :church_involvement do |t|
-      t.integer :member_id
-      t.datetime :date_joined
-      t.integer :deparment_id
-      t.integer :work_commitment_id
-      t.timestamps
-    end
-
     create_table :positions do |t|
       # Position
       t.string :name 

@@ -114,3 +114,8 @@ h1:first-child {
   font-size:13px;
 }
 
+.table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+}

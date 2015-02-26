@@ -11,16 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220053248) do
+ActiveRecord::Schema.define(version: 20150221201808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "church_involvement", force: true do |t|
-    t.integer  "member_id"
-    t.datetime "date_joined"
-    t.integer  "deparment_id"
-    t.integer  "work_commitment_id"
+  create_table "departments", force: true do |t|
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,6 +29,15 @@ ActiveRecord::Schema.define(version: 20150220053248) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+  end
+
+  create_table "involvements", force: true do |t|
+    t.integer  "member_id"
+    t.datetime "date_joined"
+    t.integer  "department_id"
+    t.integer  "work_commitment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "members", force: true do |t|
@@ -80,5 +87,10 @@ ActiveRecord::Schema.define(version: 20150220053248) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "work_commitments", force: true do |t|
+    t.string "name"
+    t.text   "description"
+  end
 
 end

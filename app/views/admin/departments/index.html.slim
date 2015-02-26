@@ -1,0 +1,35 @@
+=render 'admin/partials/notice'
+
+.block-flat
+  .header
+    a.btn.btn-primary.pull-right href="/admin/departments/new"
+      i.fa.fa-plus
+      | Add New Department
+    h3 Departments
+
+  .content
+    -if @departments.blank?
+      =render '/admin/partials/no_records'
+    -else
+      .table-responsive.center-table
+        table.table.no-border.hover
+          thead.no-border
+            tr
+              th Name
+              th Description
+              th
+          tbody.no-border-y
+            tr
+              -@departments.each do |d|
+                tr
+                  td = d.name
+                  td = d.description
+                  td
+                    .btn-group.pull-right
+                      a.btn.btn-info href="/admin/departments/#{d.id}"
+                        i.fa.fa-search
+                      a.btn.btn-success href="/admin/departments/#{d.id}/edit"
+                        i.fa.fa-pencil
+                      a.btn.btn-danger href="/admin/departments/#{d.id}" data-confirm="Are you sure?" data-method="delete" rel="nofollow"
+                        i.fa.fa-trash-o
+    =render 'admin/partials/pagination',:list=>@departments

@@ -1,0 +1,28 @@
+=render 'admin/partials/notice'
+
+.block-flat
+  .header
+
+    h3 List of Ministries and Departments
+
+  .content
+    -if @ministries.blank?
+      =render '/admin/partials/no_records'
+    -else
+      .table-responsive.center-table
+        table.table.no-border.hover
+          thead.no-border
+            tr
+              th Name
+              th 
+          tbody.no-border-y
+            tr
+              -@ministries.each do |m|
+                tr
+                  td = m.name
+                  td
+                    a.btn.btn-info href="/admin/ministries/#{m.id}"
+                      i.fa.fa-eye
+                  
+    =render 'admin/partials/pagination',:list=>@ministries
+

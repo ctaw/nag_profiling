@@ -1,0 +1,15 @@
+var joined = $("#date_joined").val(); 
+var dept = $("#department_id>option:selected").html();
+var work = $("#work_commitment_id>option:selected").html();
+
+if( (joined != "") && (dept != "" ))
+{
+  $('#churchTable tr:last').after('<tr><td>'+ joined +'</td><td>'+ dept +'</td><td>'+ work + '</td></tr>');
+  $(".msg_add").removeClass("hidden");
+  document.getElementById('date_joined').value = "";
+  document.getElementById('department_id').value = "";
+}
+else
+{
+  $(".error_msg").removeClass("hidden");
+}

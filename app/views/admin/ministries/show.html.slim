@@ -1,0 +1,26 @@
+.block-flat
+  .header
+    a.btn.btn-default.pull-right href="/admin/ministries" Back
+    h4 = @ministry.name
+    small = @ministry.description
+  .content
+    .row
+      .col-md-12
+        .panel.panel-default
+          .panel-body
+            p.title List of Members
+            hr
+            table.table.table-hover
+              thead
+                tr
+                  th Name
+                  th Status
+              tbody
+                - @members.each do |member|
+                  tr
+                    td = member.first_name + " " + member.last_name
+                    td = member.get_status
+
+
+
+
